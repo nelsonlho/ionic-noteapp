@@ -30,7 +30,7 @@
               <h3 class="panel-title"><button class="btn btn-primary btn-xs pull-right" ng-click="create()">New</button> My Notes</h3>
             </div>
             <div class="panel-body">
-              <div ng-disabled="!error">{{error}}</div>
+              <div ng-disabled="!error" class="error">{{error}}</div>
               <p ng-if="!notes.length && !error">No notes</p>
               <ul class="list-group">
                 <li class="list-group-item" ng-repeat="note in notes" ng-click="view($index)" ng-class="{active: note.id == content.id}">{{note.title}}<br />
